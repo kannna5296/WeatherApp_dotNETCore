@@ -1,8 +1,9 @@
-﻿@model IEnumerable<WeatherApp_dotNETCore.Models.WeatherSummary>
+﻿@model HomeViewModel
 @{
-    var xLabels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.dt_txt));
-    var temps = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.temp));
-    var pressure = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.pressure));
+    var xLabels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.weatherSummaries.Select(x => x.dt_txt));
+    var temps = Newtonsoft.Json.JsonConvert.SerializeObject(Model.weatherSummaries.Select(x => x.temp));
+    var pressure = Newtonsoft.Json.JsonConvert.SerializeObject(Model.weatherSummaries.Select(x => x.pressure));
+    
     ViewData["Title"] = "Temp Graph";
 }
 
@@ -10,6 +11,11 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <select>
+        @foreach(var countryData in Model.countryDatas) { 
+        <option id="@Html.DisplayFor(modelItem => countryData.Id)">@Html.DisplayFor(modelItem => countryData.Name)</option>
+        }
+    </select>
     <canvas id="TempChart"></canvas>
     <canvas id="PressureChart"></canvas>
 

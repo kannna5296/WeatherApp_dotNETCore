@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WeatherApp_dotNETCore.Models;
 using Microsoft.Extensions.Configuration;
+using WeatherApp_dotNETCore.Utils;
 
 namespace WeatherApp_dotNETCore.Controllers
 {
@@ -29,8 +30,12 @@ namespace WeatherApp_dotNETCore.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<WeatherSummary> summaryList = await GetWeather();
-            return View(summaryList);
+            HomeViewModel homeView = new HomeViewModel();
+            
+            homeView.countryDatas = ReadJson();
+            homeView.weatherSummaries = await GetWeather();
+
+            return View(homeView);
         }
 
         public IActionResult Privacy()
@@ -70,7 +75,8 @@ namespace WeatherApp_dotNETCore.Controllers
             try
             {
                 weatherData = JsonConvert.DeserializeObject<WeatherData>(body);
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 //TODO
                 //後でログ埋める
@@ -93,5 +99,17 @@ namespace WeatherApp_dotNETCore.Controllers
 
             return summaryList;
         }
+
+        private List<CountryData> ReadJson()
+        {
+            string file_in = "Assets/json/city.list.json";
+            string str_json = FileIO.FileToStr(file_in);
+
+            //jsonからクラスへのデシリアライズ
+            List<CountryData> country = JsonConvert.DeserializeObject<List<CountryData>>(str_json);
+
+            return country;
+        }
     }
 }
+

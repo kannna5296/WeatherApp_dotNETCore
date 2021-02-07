@@ -1,0 +1,312 @@
+[
+    {
+        "id": 1847947,
+        "name": "Shingū",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 135.983337,
+            "lat": 33.73333
+        }
+    },
+    {
+        "id": 1847963,
+        "name": "Atsugi",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.359726,
+            "lat": 35.438889
+        }
+    },
+    {
+        "id": 1847966,
+        "name": "Akashi",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 134.983337,
+            "lat": 34.633331
+        }
+    },
+    {
+        "id": 1847968,
+        "name": "Zushi",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.585556,
+            "lat": 35.291672
+        }
+    },
+    {
+        "id": 1847979,
+        "name": "Awazuchō",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 135.899994,
+            "lat": 34.98333
+        }
+    },
+    {
+        "id": 1847996,
+        "name": "Zaōmachi",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 138.850006,
+            "lat": 37.450001
+        }
+    },
+    {
+        "id": 1848002,
+        "name": "Zamami",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 127.301109,
+            "lat": 26.224171
+        }
+    },
+    {
+        "id": 1848004,
+        "name": "Zama",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.388611,
+            "lat": 35.488892
+        }
+    },
+    {
+        "id": 1848015,
+        "name": "Yuzawa",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 138.816666,
+            "lat": 36.933331
+        }
+    },
+    {
+        "id": 1848016,
+        "name": "Yuza",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.916672,
+            "lat": 39.0
+        }
+    },
+    {
+        "id": 1848028,
+        "name": "Yusuhara",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 132.916672,
+            "lat": 33.383331
+        }
+    },
+    {
+        "id": 1848040,
+        "name": "Yūrakuchō",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.766663,
+            "lat": 35.666672
+        }
+    },
+    {
+        "id": 1848049,
+        "name": "Yura",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 133.75,
+            "lat": 35.48333
+        }
+    },
+    {
+        "id": 1848087,
+        "name": "Yukuhashi",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 130.983002,
+            "lat": 33.728729
+        }
+    },
+    {
+        "id": 1848096,
+        "name": "Yūki",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.883331,
+            "lat": 36.299999
+        }
+    },
+    {
+        "id": 1848113,
+        "name": "Yugawara",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.066666,
+            "lat": 35.150002
+        }
+    },
+    {
+        "id": 1848119,
+        "name": "Yugawa",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 138.233337,
+            "lat": 36.033329
+        }
+    },
+    {
+        "id": 1848131,
+        "name": "Yuasa",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 135.183334,
+            "lat": 34.033329
+        }
+    },
+    {
+        "id": 1848169,
+        "name": "Yoshino-chō",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 135.857681,
+            "lat": 34.396111
+        }
+    },
+    {
+        "id": 1848188,
+        "name": "Yoshikawa",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.839447,
+            "lat": 35.885281
+        }
+    },
+    {
+        "id": 1848193,
+        "name": "Yoshii",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 138.399994,
+            "lat": 38.049999
+        }
+    },
+    {
+        "id": 1848194,
+        "name": "Yoshii",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 138.983337,
+            "lat": 36.25
+        }
+    },
+    {
+        "id": 1848200,
+        "name": "Yoshie",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 136.172287,
+            "lat": 35.987041
+        }
+    },
+    {
+        "id": 1848210,
+        "name": "Yoshida-kasugachō",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 138.883331,
+            "lat": 37.683331
+        }
+    },
+    {
+        "id": 1848211,
+        "name": "Yoshida",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 138.216675,
+            "lat": 36.666672
+        }
+    },
+    {
+        "id": 1848230,
+        "name": "Miimachi-yoromi",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 136.966675,
+            "lat": 37.316669
+        }
+    },
+    {
+        "id": 1848243,
+        "name": "Yorii",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.199997,
+            "lat": 36.116669
+        }
+    },
+    {
+        "id": 1848254,
+        "name": "Yono",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 139.633331,
+            "lat": 35.883331
+        }
+    },
+    {
+        "id": 1848266,
+        "name": "Yonakuni",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 123.0,
+            "lat": 24.466669
+        }
+    },
+    {
+        "id": 1848277,
+        "name": "Yonago",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 133.333328,
+            "lat": 35.433331
+        }
+    },
+    {
+        "id": 1848281,
+        "name": "Yonabaru",
+        "state": "",
+        "country": "JP",
+        "coord": {
+            "lon": 127.753891,
+            "lat": 26.201389
+        }
+    }
+]
