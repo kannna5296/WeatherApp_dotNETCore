@@ -1,0 +1,95 @@
+﻿@model IEnumerable<WeatherApp_dotNETCore.Models.WeatherSummary>
+@{
+    var xLabels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.dt_txt));
+    var temps = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.temp));
+    var pressure = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.pressure));
+    ViewData["Title"] = "Temp Graph";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <canvas id="TempChart"></canvas>
+    <canvas id="PressureChart"></canvas>
+
+    <script>
+        var tempctx = document.getElementById("TempChart");
+        var TempChart = new Chart(tempctx, {
+            type: 'line',
+            data: {
+                labels: @Html.Raw(xLabels),
+                datasets: [
+                    {
+                        label: '気温（度)',
+                        data: @Html.Raw(temps),
+                        borderColor: "rgba(255,0,0,1)",
+                        backgroundColor: "rgba(0,0,0,0)"
+                    }
+                    @*{
+                        label: '地表面気圧（Pa)',
+                        data: @Html.Raw(pressure),
+                        borderColor: "rgba(0,0,255,1)",
+                        backgroundColor: "rgba(0,0,0,0)"
+                    }*@
+                ]
+            },
+            options: {
+                title: {
+                    display: false,
+                    text: '気温（8月1日~8月7日）'
+                },
+                scales: {
+                    yAxes: [{
+                        position: "left",
+                        ticks: {
+                            Max: 30,
+                            Min: 0,
+                            stepSize: 10,
+                            callback: function (value, index, values) {
+                                return value + '度'
+                            }
+                        }
+                    }
+                    ]
+                },
+            }
+        });
+
+        var pressurectx = document.getElementById("PressureChart");
+        var PressureChart = new Chart(pressurectx, {
+            type: 'line',
+            data: {
+                labels: @Html.Raw(xLabels),
+                datasets: [
+                    {
+                        label: '地表面気圧（Pa)',
+                        data: @Html.Raw(pressure),
+                        borderColor: "rgba(0,0,255,1)",
+                        backgroundColor: "rgba(0,0,0,0)"
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: false,
+                    text: '気温（8月1日~8月7日）'
+                },
+                scales: {
+                    yAxes: [{
+                        position: "left",
+                        ticks: {
+                            Max: 1100,
+                            Min: 950,
+                            stepSize: 50,
+                            callback: function (value, index, values) {
+                                return value + 'Pa'
+                            }
+                        }
+                    }
+                    ]
+                },
+            }
+        });
+    </script>
+</div>
