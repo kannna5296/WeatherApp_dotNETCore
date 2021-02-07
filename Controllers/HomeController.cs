@@ -29,7 +29,7 @@ namespace WeatherApp_dotNETCore.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<WeatherSummary> summaryList = await AAA();
+            List<WeatherSummary> summaryList = await GetWeather();
             return View(summaryList);
         }
 
@@ -45,7 +45,7 @@ namespace WeatherApp_dotNETCore.Controllers
         }
 
 
-        public async Task<List<WeatherSummary>> AAA()
+        public async Task<List<WeatherSummary>> GetWeather()
         {
             var client = new HttpClient();
             string body;
