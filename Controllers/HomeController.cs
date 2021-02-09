@@ -18,13 +18,13 @@ namespace WeatherApp_dotNETCore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        //ILoggerと区別
+        public static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         private readonly IConfiguration _config;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
+        public HomeController(IConfiguration configuration)
         {
-            _logger = logger;
             _config = configuration;
         }
 
@@ -75,11 +75,11 @@ namespace WeatherApp_dotNETCore.Controllers
             try
             {
                 weatherData = JsonConvert.DeserializeObject<WeatherData>(body);
+                logger.Info("Deserialize Succeeded.");
             }
             catch (Exception ex)
             {
-                //TODO
-                //後でログ埋める
+                logger.Error(ex,"Deserialize Failed.");
             }
 
 
