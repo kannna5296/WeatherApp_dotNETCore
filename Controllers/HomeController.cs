@@ -38,11 +38,6 @@ namespace WeatherApp_dotNETCore.Controllers
             return View(homeView);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -88,9 +83,9 @@ namespace WeatherApp_dotNETCore.Controllers
             {
                 WeatherSummary summary = new WeatherSummary()
                 {
-                    dt_txt = list.DtTxt.ToString(),
+                    dt_txt = list.DtTxt.ToString("yyyy年MM月dd日 tthh時"),
                     //セ氏に変換
-                    temp = list.Main.Temp - 273,
+                    temp = Math.Truncate((list.Main.Temp - 273) *10) / 10,
                     pressure = list.Main.Pressure
                 };
 
